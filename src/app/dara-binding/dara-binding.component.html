@@ -1,8 +1,13 @@
 <!-- Data binding -->
-<p>Nome: {{name}}</p>
-<p>Idade: {{age}}</p>
-<p>João é maior de idade? {{age >= 18 ? "sim" : "não"}}</p>
+<p>Name: {{name}}</p>
+<p>Age: {{age}}</p>
+<p>Are of legal age? {{age >= 18 ? "yes" : "no"}}</p>
 <hr/>
-
-<!-- Property binding -->
-<input type="text">
+<div class="container_input">
+    <label for="name_input">Name: </label>
+    <input type="text" [(ngModel)]="name" id="name_input">
+</div>
+<div class="container_input">
+    <label for="name_input">Age: </label>
+    <input type="number" [(ngModel)]="age" id="age_input" min="0">
+</div>

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-dara-binding',
@@ -7,9 +7,9 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class DaraBindingComponent implements OnInit {
   
-  name: string = "João"
+  name: string = ""
 
-  age: number = 28
+  age: number = 0
 
   constructor() { }
 

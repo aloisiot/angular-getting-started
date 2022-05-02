@@ -1,0 +1,43 @@
+<form #form="ngForm">
+    <label>
+        Nome:
+        <input type="text" name="nome" ngModel #nome="ngModel" required/>
+        <div>Value: {{nome.value}}</div>
+        <div>Valid: {{nome.valid}}</div>
+        <div>Dirty: {{nome.dirty}}</div>
+        <div>Touched: {{nome.touched}}</div>
+        <div>Errors: {{nome.errors | json}}</div>
+    </label>
+    <br>
+    <label>
+        Lastname:
+        <input type="text" name="lastname" ngModel>
+    </label>
+    <br>
+    <label>
+        <input type="radio" name="opt" value="Opt-1" ngModel>
+        Opt 1:
+    </label>
+    <br>
+    <label>
+        <input type="radio" name="opt" value="Opt-2" ngModel>
+        Opt 2:
+    </label>
+    <br>
+    <label>
+        <input type="checkbox" name="confirm" ngModel>
+        confirm:
+    </label>
+    <br>
+    <select name="options" ngModel>
+        <option value="Opcao 1">Opcao 1</option>
+        <option>Opcao 2</option>
+    </select>
+    <br>
+    <button type="button">type: button</button>
+    <br>
+    <button type="submit">type: submit</button>
+</form>
+
+<div class="p-1">{{form.value | json}}</div>
+<p>Submited: {{form.submitted}}</p>

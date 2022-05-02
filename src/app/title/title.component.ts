@@ -8,7 +8,7 @@ import { Component, Input, OnChanges, OnDestroy, OnInit } from '@angular/core';
 export class TitleComponent implements OnInit, OnChanges, OnDestroy {
 
   @Input()
-  title: string = "initial title"
+  text: string = "initial title"
   
   constructor() { }
 
@@ -17,7 +17,7 @@ export class TitleComponent implements OnInit, OnChanges, OnDestroy {
   }
 
   ngOnChanges(): void {
-    console.log(this.title)
+    console.log(this.text)
   }
 
   ngOnDestroy(): void {

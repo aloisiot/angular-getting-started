@@ -1,0 +1,5 @@
+<div style="background-color: #AAF;">
+    <ng-content select="h1"></ng-content>
+    <p [ngClass]="state ? 'active' : 'disabled'">ngClass</p>
+    <ng-content select="p"></ng-content>
+</div>

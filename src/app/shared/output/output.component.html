@@ -1,0 +1,4 @@
+<div *ngFor="let person of persons">
+    <div>{{person.name}}</div>
+    <button (click)="emitSelectedPerson(person.id)">Select</button>
+</div>
