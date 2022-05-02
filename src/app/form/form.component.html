@@ -36,8 +36,9 @@
     <br>
     <button type="button">type: button</button>
     <br>
-    <button type="submit">type: submit</button>
+    <button type="submit" [disabled]="form.invalid">type: submit</button>
 </form>
 
 <div class="p-1">{{form.value | json}}</div>
 <p>Submited: {{form.submitted}}</p>
+<p>Valid: {{form.valid}}</p>
