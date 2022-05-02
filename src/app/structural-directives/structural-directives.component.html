@@ -10,11 +10,8 @@
 
 <!-- Rendering list of names -->
 <ul>
-    <li
-        *ngFor="let item of nameList; let i = index"
-        [ngStyle]="{'background-color': (i + 1) % 2 === 0 && '#fbb'}"
-        (click)="removeNameOfList(i)"
-    > {{i + 1}} - {{item}}
+    <li *ngFor="let item of nameList; let i = index" (click)="removeNameOfList(i)">
+        {{i + 1}} - {{item}}
     </li>
 </ul>
 
