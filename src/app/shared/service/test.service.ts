@@ -8,7 +8,7 @@ export class TestService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getPropX(onSucess: (resp: any) => void, onError?: (error: any) => void) {
+  getPropX() {
     this.httpClient.get("")
   }
   

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { InvestimentsService } from '../shared/service/investiments.service';
 
 @Component({
   selector: 'app-banking',
@@ -8,10 +9,14 @@ import { Component, OnInit } from '@angular/core';
 export class BankingComponent implements OnInit {
 
   private saldoAtual: number = 0;
+  public investiments: any
 
-  constructor() { }
+  constructor(private investimentService: InvestimentsService) { }
 
   ngOnInit(): void {
+    this.investimentService
+      .listAll()
+      .subscribe(res => this.investiments = res)
   }
 
   get saldo(): number {
