@@ -5,11 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TitleComponent } from './title/title.component';
 import { DaraBindingComponent } from './dara-binding/dara-binding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StructuralDirectivesComponent } from './structural-directives/structural-directives.component';
 import { AtributeDirectivesComponent } from './atribute-directives/atribute-directives.component';
 import { SharedModule } from './shared/shared.module';
 import { FormComponent } from './form/form.component';
+import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
+import { FirstComponentComponent } from './first-component/first-component.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
@@ -18,12 +22,17 @@ import { FormComponent } from './form/form.component';
     DaraBindingComponent,
     StructuralDirectivesComponent,
     AtributeDirectivesComponent,
-    FormComponent
+    FormComponent,
+    ReactiveFormsComponent,
+    FirstComponentComponent,
+    NotFoundComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     SharedModule
   ],
   providers: [],
