@@ -14,6 +14,7 @@ import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.componen
 import { FirstComponentComponent } from './first-component/first-component.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { HomeComponent } from './pages/home/home.component';
+import { BankingComponent } from './banking/banking.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { HomeComponent } from './pages/home/home.component';
     ReactiveFormsComponent,
     FirstComponentComponent,
     NotFoundComponent,
-    HomeComponent
+    HomeComponent,
+    BankingComponent
   ],
   imports: [
     BrowserModule,

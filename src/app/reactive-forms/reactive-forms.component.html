@@ -1,0 +1,38 @@
+<form [formGroup]="signUpForm" (ngSubmit)="submitForm()">
+    <label class="flex-col">
+        <span [class]="signUpForm.get('firstname')?.errors && signUpForm.get('firstname')?.touched && 'validation-error-msg'">
+            Firstname
+        </span>
+        <input type="text" formControlName="firstname">
+    </label>
+    <br>
+    <label class="flex-col">
+        <span>
+            Lastname
+        </span>
+        <input type="text" formControlName="lastname">
+    </label>
+    <br>
+    <label class="flex-col">
+        <span [class]="signUpForm.get('username')?.errors && signUpForm.get('username')?.touched && 'validation-error-msg'">
+            Username
+        </span>
+        <input type="text" formControlName="username">
+    </label>
+    <br>
+    <label class="flex-col">
+        <span [class]="signUpForm.get('password')?.errors && signUpForm.get('password')?.touched && 'validation-error-msg'">
+            Password
+        </span>
+        <input type="password" formControlName="password">
+    </label>
+    <br>
+    <div class="py-4">
+        Firstname errors: {{signUpForm.get('firstname')?.errors | json}} <br>
+        Lastname errors: {{signUpForm.get('lastname')?.errors | json}} <br>
+        Username errors: {{signUpForm.get('username')?.errors | json}} <br>
+        Password errors: {{signUpForm.get('password')?.errors | json}} <br>
+    </div>
+    <button type="reset">Reset</button>{{" "}}
+    <button type="submit" [disabled]="signUpForm.invalid">Submit</button>
+</form>
