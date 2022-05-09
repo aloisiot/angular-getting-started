@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-banking',
-  templateUrl: './banking.component.html'
+  templateUrl: './banking.component.html',
+  styleUrls: ['./banking.component.less']
 })
 export class BankingComponent implements OnInit {
 
@@ -18,15 +19,16 @@ export class BankingComponent implements OnInit {
   }
 
   sacar(valor: string) {
-    if(this.saldoAtual >= Number(valor)){
-      this.saldoAtual -= Number(valor)
+    const valorSaque = Number(valor)
+    if(this.saldoAtual >= valorSaque && valorSaque > 0){
+      this.saldoAtual -= valorSaque
     }
   }
 
   depositar(valor: string) {
-    if(Number(valor) > 0) {
-      this.saldoAtual += Number(valor)
+    const valorDeposito = Number(valor)
+    if(valorDeposito > 0) {
+      this.saldoAtual += valorDeposito
     }
   }
-
 }
